@@ -1,0 +1,43 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center #注册进Eureka服务器的微服务名称
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/wangjieji/springcloud-config.git #GitHub上面的git仓库名字
+          #### 搜索目录
+          search-paths:
+            - springcloud-config
+          force-pull: true
+          username: wangjieji
+          password: WJJ94125
+          default-label: main
+      #### 读取分支
+      label: main
+#rabbitma相关配置
+  rabbitmq:
+    host: 192.168.231.140
+    port: 5672
+    username: guest
+    password: guest
+
+# 服务器注册到enureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7001/eureka
+
+#rabbitmq相关配置，暴露buss刷新配置的端点
+management:
+  endpoints:  #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
+
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
