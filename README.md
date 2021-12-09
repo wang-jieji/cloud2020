@@ -10,3 +10,5 @@ SpringCloud2020 学习项目
    但如果不配合@ResponseBody注解使用，直接使用@Controller返回实体类，会导致页面报404错误
    
    二、@RestController类中的所有方法只能返回String、Object、Json等实体对象，不能跳转到模版页面。@RestController相当于@ResponseBody + @Controller。
+   
+3. 配置中心Config 集成RabbitMQ时，配置文件里.yml里要把rabbitmq配置放在Spring标签下
