@@ -17,7 +17,7 @@ spring:
           default-label: main
       #### 读取分支
       label: main
-#rabbitma相关配置
+  #rabbitma相关配置
   rabbitmq:
     host: 192.168.231.140
     port: 5672
