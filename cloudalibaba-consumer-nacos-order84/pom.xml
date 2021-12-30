@@ -29,6 +29,7 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+          <version>2.1.4.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.example.www</groupId>
